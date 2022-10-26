@@ -41,5 +41,10 @@ public class LinkedList {
 		node.next = currentNode.next;
 		currentNode.next = node;
 	}
-}
 
+	// Method to delete the first element of the list
+	public void deleteFirst() {
+		Node currentNode = head;
+		head = head.next;
+	}
+}
