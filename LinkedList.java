@@ -42,3 +42,4 @@ public class LinkedList {
 		currentNode.next = node;
 	}
 }
+

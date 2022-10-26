@@ -14,3 +14,4 @@ public class LinkedListMain {
 		linkedList.toPrint();
 	}
 }
+
