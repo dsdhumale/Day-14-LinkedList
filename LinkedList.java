@@ -47,4 +47,16 @@ public class LinkedList {
 		Node currentNode = head;
 		head = head.next;
 	}
+
+	// Method to delete the last element of the list
+	public void deleteLast() {
+		Node currentNode = head, secondLast = null;
+		while (currentNode.next != null) {
+			secondLast = currentNode;
+			currentNode = currentNode.next;
+		}
+		if (secondLast != null) {
+			secondLast.next = null;
+		}
+	}
 }
