@@ -1,18 +1,39 @@
 package com.Bridgelabz.Day14.LinkedList;
 
 public class LinkedList {
-	public static void main(String[] args) {
-		INode head;
-		LinkedListOperation operation = new LinkedListOperation();
-		INode<Integer> firstNode = new Node<>(56);
-		Node<Integer> secondNode = new Node<>(30);
-		Node<Integer> thirdNode = new Node<>(70);
+	Node head;
 
-		head = operation.addNode(firstNode);
-		operation.display(head);
-		head = operation.addNode(secondNode);
-		operation.display(head);
-		head = operation.addNode(thirdNode);
-		operation.display(head);
+//Method for adding data
+	public void addFirst(int data) {
+		Node newNode = new Node(data);
+		if (head == null) {
+			head = newNode;
+		} else {
+			newNode.next = head;
+			head = newNode;
+		}
 	}
+//Method for displaying elements of Linked list
+
+	public void display() {
+		if (head == null)
+			System.out.println("No elements to display.");
+
+		else {
+			Node temp = head;
+			while (temp != null) {
+
+				if (temp.next != null)
+					System.out.print(temp.data + " -> ");
+
+				else
+
+					System.out.println(temp.data);
+				temp = temp.next;
+
+			}
+		}
+
+	}
+
 }

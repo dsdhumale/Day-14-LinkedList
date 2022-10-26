@@ -1,7 +1,7 @@
 package com.Bridgelabz.Day14.LinkedList;
 
 public interface INode<K> {
-	void setKey(K Key);
+	void setKey(K data);
 
 	K getKey();
 
